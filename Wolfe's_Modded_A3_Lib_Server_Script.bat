@@ -17,6 +17,7 @@ echo What would you like to do:
 	echo 4 - Quit.
 	echo:
 	echo 5 - (Beta!) RHS Server
+	echo 6 - Update Server Keys (Will Stop Server)
 	echo:
 	echo:
 set /P userSelect=Choice: 
@@ -28,6 +29,8 @@ if %userSelect% EQU 2 goto serverUpdate
 if %userSelect% EQU 3 goto serverStop
 
 if %userSelect% EQU 5 goto serverStartRHS
+
+if %userSelect%	EQU 6 goto serverKeyUpdate
 
 if %userSelect% EQU 4 ( EXIT ) ELSE (
 		echo:
@@ -55,8 +58,7 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 			:serverUpdateReturn
 				cd "C:\Users\RyWolfe\Documents\steamcmd"
 					set /P UserPW=Pass: 
-					set /P UserGC=Guard Code: 
-						start "Updater" /wait steamcmd.exe +login darkshadows311 %UserPW% %UserGC% +force_install_dir "C:\Users\RyWolfe\Documents\Arma3Server" +workshop_download_item 107410 450814997 +workshop_download_item 107410 463939057 +workshop_download_item 107410 713709341 +workshop_download_item 107410 615007497 +workshop_download_item 107410 639837898 +workshop_download_item 107410 730310357 +workshop_download_item 107410 333310405 +workshop_download_item 107410 620019431 +workshop_download_item 107410 772765069 +workshop_download_item 107410 775069027 +app_update 233780 validate +quit
+						start "Updater" /wait steamcmd.exe +login darkshadows311 %UserPW% +force_install_dir "C:\Users\RyWolfe\Documents\Arma3Server" +workshop_download_item 107410 450814997 +workshop_download_item 107410 463939057 +workshop_download_item 107410 713709341 +workshop_download_item 107410 615007497 +workshop_download_item 107410 639837898 +workshop_download_item 107410 730310357 +workshop_download_item 107410 333310405 +workshop_download_item 107410 620019431 +workshop_download_item 107410 772765069 +workshop_download_item 107410 775069027 +workshop_download_item 107410 684872545 +workshop_download_item 107410 741196544 +app_update 233780 validate +quit
 							echo:
 							echo:
 							echo ~Server Mods Updated!~
@@ -77,6 +79,8 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\620019431\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@task_force_radio" /S /Y /I /Q /K 
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\772765069\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@WolfeLib" /S /Y /I /Q /K 
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\775069027\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@WolfeRHSLib" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\684872545\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@Tryk's Multi-play Uniforms Pack 0.9.4b" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\741196544\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@TRYK Multiplay-Uniform Fix" /S /Y /I /Q /K 
 		
 			echo:
 			echo:
@@ -127,7 +131,11 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 			del /S /Q *.*
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\@WolfeRHSLib"
 			del /S /Q *.*
-	goto serverUpdate2
+		cd "C:\Users\RyWolfe\Documents\Arma3Server\@Tryk's Multi-play Uniforms Pack 0.9.4b"
+			del /S /Q *.*
+		cd "C:\Users\RyWolfe\Documents\Arma3Server\@TRYK Multiplay-Uniform Fix"
+			del /S /Q *.*
+	goto serverUpdate3
 	
 :serverStartRHS
 		tasklist /FI "IMAGENAME eq arma3server.exe" 2>NUL | find /I /N "arma3server.exe">NUL
@@ -135,7 +143,7 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 				:serverRestartReturnRHS
 				color 0D
 					cd "C:\Users\RyWolfe\Documents\Arma3Server"
-						start "Wolfe's A3 Liberation Modded" arma3server.exe -port=2302 "-config=C:\Users\RyWolfe\Documents\Arma3Server\TADST\default\TADST_config.cfg" "-cfg=C:\Users\RyWolfe\Documents\Arma3Server\TADST\default\TADST_basic.cfg" "-profiles=C:\Users\RyWolfe\Documents\Arma3Server\TADST\default" -name=default -filePatching -pid=pid.log -ranking=ranking.log "-mod=curator;heli;kart;mark;@ace;@Advanced Rappelling;@Advanced Sling Loading;@Advanced Towing;@Advanced Urban Rappelling;@Arma Enhanced Movement;@CBA_A3;@task_force_radio;@WolfeLib;@RHSAFRF;@RHSUSAF" -autoInit
+						start "Wolfe's A3 Liberation Modded" arma3server.exe -port=2302 "-config=C:\Users\RyWolfe\Documents\Arma3Server\TADST\default\TADST_config.cfg" "-cfg=C:\Users\RyWolfe\Documents\Arma3Server\TADST\default\TADST_basic.cfg" "-profiles=C:\Users\RyWolfe\Documents\Arma3Server\TADST\default" -name=default -filePatching -pid=pid.log -ranking=ranking.log "-mod=curator;heli;kart;mark;@ace;@Advanced Rappelling;@Advanced Sling Loading;@Advanced Towing;@Advanced Urban Rappelling;@Arma Enhanced Movement;@CBA_A3;@task_force_radio;@WolfeLib;@RHSAFRF;@RHSUSAF;@Tryk's Multi-play Uniforms Pack 0.9.4b;@TRYK Multiplay-Uniform Fix" -autoInit
 							echo:
 							echo:
 							echo ~Server (RHS BETA) Running!~
@@ -147,3 +155,47 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 	color 0c
 		taskkill /IM "arma3server.exe"
 	goto serverRestartReturnRHS
+
+:serverUpdate3
+		cd "C:\Users\RyWolfe\Documents\Arma3Server\keys"
+			del /S /Q *.*
+		
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@CBA_A3\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@ace\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Rappelling\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Sling Loading\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Towing\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Urban Rappelling\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Arma Enhanced Movement\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@task_force_radio\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@WolfeLib\Keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@WolfeRHSLib\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Tryk's Multi-play Uniforms Pack 0.9.4b\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@TRYK Multiplay-Uniform Fix\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+	goto serverUpdate2
+	
+:serverKeyUpdate
+		color 0c
+			taskkill /IM "arma3server.exe"
+		
+		cd "C:\Users\RyWolfe\Documents\Arma3Server\keys"
+			del /S /Q *.*
+		
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@CBA_A3\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@ace\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Rappelling\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Sling Loading\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Towing\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Urban Rappelling\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Arma Enhanced Movement\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@task_force_radio\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@WolfeLib\Keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@WolfeRHSLib\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Tryk's Multi-play Uniforms Pack 0.9.4b\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@TRYK Multiplay-Uniform Fix\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+		echo:	
+		echo:
+		echo ~Server Keys Updated!~
+		echo:
+		echo:
+	goto menu	
