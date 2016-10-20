@@ -130,7 +130,7 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 			del /S /Q *.*
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\@TRYK Multiplay-Uniform Fix"
 			del /S /Q *.*
-	goto serverUpdate3
+	goto serverUpdate2
 	
 :serverStartRHS
 		tasklist /FI "IMAGENAME eq arma3server.exe" 2>NUL | find /I /N "arma3server.exe">NUL
