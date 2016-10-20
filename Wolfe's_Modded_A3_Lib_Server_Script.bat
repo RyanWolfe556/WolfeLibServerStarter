@@ -81,13 +81,8 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\775069027\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@WolfeRHSLib" /S /Y /I /Q /K 
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\684872545\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@Tryk's Multi-play Uniforms Pack 0.9.4b" /S /Y /I /Q /K 
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\741196544\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@TRYK Multiplay-Uniform Fix" /S /Y /I /Q /K 
-		
-			echo:
-			echo:
-			echo ~Server Files Updated!~
-			echo:
-			echo:
-	goto menu
+
+	goto serverUpdate3
 			
 :serverStop
 	color 0C
@@ -135,7 +130,7 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 			del /S /Q *.*
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\@TRYK Multiplay-Uniform Fix"
 			del /S /Q *.*
-	goto serverUpdate3
+	goto serverUpdate2
 	
 :serverStartRHS
 		tasklist /FI "IMAGENAME eq arma3server.exe" 2>NUL | find /I /N "arma3server.exe">NUL
@@ -159,6 +154,8 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 :serverUpdate3
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\keys"
 			del /S /Q *.*
+			
+		XCOPY "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Server\keys*.*" "C:\Users\RyWolfe\Documents\Arma3Server\keys" /S /Y /I /Q /K 
 		
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@CBA_A3\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@ace\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
@@ -172,7 +169,13 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@WolfeRHSLib\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Tryk's Multi-play Uniforms Pack 0.9.4b\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@TRYK Multiplay-Uniform Fix\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
-	goto serverUpdate2
+			
+			echo:
+			echo:
+			echo ~Server Files Updated!~
+			echo:
+			echo:
+	goto menu
 	
 :serverKeyUpdate
 		color 0c
@@ -180,6 +183,8 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 		
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\keys"
 			del /S /Q *.*
+		
+		XCOPY "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Server\keys*.*" "C:\Users\RyWolfe\Documents\Arma3Server\keys" /S /Y /I /Q /K 
 		
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@CBA_A3\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@ace\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
