@@ -70,18 +70,30 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 :serverUpdate2
 		
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\450814997\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@CBA_A3\" /S /Y /I /Q /K 
+			echo "@CBA_A3" Updated
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\463939057\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@ace" /S /Y /I /Q /K 
+			echo "@ace" Updated
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\713709341\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Rappelling" /S /Y /I /Q /K 
+			echo "@Advanced Rappelling" Updated
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\615007497\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Sling Loading" /S /Y /I /Q /K 
+			echo "@Advanced Sling Loading" Updated
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\639837898\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Towing" /S /Y /I /Q /K 
+			echo "@Advanced Towing" Updated
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\730310357\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Urban Rappelling" /S /Y /I /Q /K 
+			echo "Advanced Urban Rappelling" Updated
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\333310405\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@Arma Enhanced Movement" /S /Y /I /Q /K 
+			echo "@Arma Enhanced Movement" Updated
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\620019431\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@task_force_radio" /S /Y /I /Q /K 
+			echo "@task_force_radio" Updated
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\772765069\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@WolfeLib" /S /Y /I /Q /K 
+			echo "@WolfeLib" Updated
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\775069027\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@WolfeRHSLib" /S /Y /I /Q /K 
+			echo "@WolfeRHSLib" Updated
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\684872545\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@Tryk's Multi-play Uniforms Pack 0.9.4b" /S /Y /I /Q /K 
+			echo "@Tryk's Multi-play Uniforms Pack" Updated
 		XCOPY "C:\Users\RyWolfe\Documents\steamcmd\steamapps\workshop\content\107410\741196544\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\@TRYK Multiplay-Uniform Fix" /S /Y /I /Q /K 
-
+			echo "@TRYK Multiplay-Uniform Fix" Updated
+		
 	goto serverUpdate3
 			
 :serverStop
@@ -108,28 +120,41 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 :serverUpdate2_1
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\@CBA_A3\"
 			del /S /Q *.*
+				echo CBA Wiped
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\@ace"
 			del /S /Q *.*
+				echo ace Wiped
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Rappelling"
 			del /S /Q *.*
+				echo Advanced Rappelling Wiped
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Sling Loading"
 			del /S /Q *.*
+				echo Advanced Sling Loading Wiped
 		cd	"C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Towing"
 			del /S /Q *.*
+				echo Advanced Towing Wiped
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Urban Rappelling"
 			del /S /Q *.*
+				echo Advanced Urban Rappelling Wiped
 		cd	"C:\Users\RyWolfe\Documents\Arma3Server\@Arma Enhanced Movement"
 			del /S /Q *.*
+				echo Arma Enhanced Movement Wiped
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\@task_force_radio"
 			del /S /Q *.*
+				echo task_force_radio Wiped
 		cd	"C:\Users\RyWolfe\Documents\Arma3Server\@WolfeLib"
 			del /S /Q *.*
+				echo WolfeLib Wiped
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\@WolfeRHSLib"
 			del /S /Q *.*
+				echo WolfeRHSLib Wiped
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\@Tryk's Multi-play Uniforms Pack 0.9.4b"
 			del /S /Q *.*
+				echo Tryk's Multi-play Uniforms Pack Wiped
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\@TRYK Multiplay-Uniform Fix"
 			del /S /Q *.*
+				echo TRYK Multiplay-Uniform Fix Wiped
+				echo: 
 	goto serverUpdate2
 	
 :serverStartRHS
@@ -154,21 +179,34 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 :serverUpdate3
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\keys"
 			del /S /Q *.*
-			
+				echo Keys Wiped.
+				echo:
 		XCOPY "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Server\keys*.*" "C:\Users\RyWolfe\Documents\Arma3Server\keys" /S /Y /I /Q /K 
-		
+			echo A3 Keys Copied
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@CBA_A3\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+			echo CBA Keys Copied
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@ace\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+			echo ACE3 Keys Copied
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Rappelling\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+			echo Advanced Rappelling Keys Copied
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Sling Loading\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+			echo Advanced Sling Loading Keys Copied
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Towing\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+			echo Advanced Towing Keys Copied
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Advanced Urban Rappelling\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+			echo Advanced Urban Rappelling Keys Copied
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Arma Enhanced Movement\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+			echo Arma Enhanced Movement Keys Copied
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@task_force_radio\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+			echo task_force_radio Keys Copied
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@WolfeLib\Keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+			echo WolfeLib Keys Copied
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@WolfeRHSLib\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+			echo WolfeRHSLib Keys Copied
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@Tryk's Multi-play Uniforms Pack 0.9.4b\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+			echo Tryk's Multi-play Uniforms Pack Keys Copied
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@TRYK Multiplay-Uniform Fix\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
+			echo TRYK Multiplay-Uniform Fix Keys Copied
 			
 			echo:
 			echo:
