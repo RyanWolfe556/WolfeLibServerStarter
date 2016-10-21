@@ -155,7 +155,7 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\keys"
 			del /S /Q *.*
 			
-		XCOPY "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Server\keys*.*" "C:\Users\RyWolfe\Documents\Arma3Server\keys" /S /Y /I /Q /K 
+		XCOPY "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Server\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\keys" /S /Y /I /Q /K 
 		
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@CBA_A3\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@ace\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
@@ -184,7 +184,7 @@ if %userSelect% EQU 4 ( EXIT ) ELSE (
 		cd "C:\Users\RyWolfe\Documents\Arma3Server\keys"
 			del /S /Q *.*
 		
-		XCOPY "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Server\keys*.*" "C:\Users\RyWolfe\Documents\Arma3Server\keys" /S /Y /I /Q /K 
+		XCOPY "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Server\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\keys" /S /Y /I /Q /K 
 		
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@CBA_A3\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
 		XCOPY "C:\Users\RyWolfe\Documents\Arma3Server\@ace\keys\*.*" "C:\Users\RyWolfe\Documents\Arma3Server\Keys" /S /Y /I /Q /K 
