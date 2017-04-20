@@ -64,7 +64,7 @@ if %userSelect% EQU 6 ( EXIT ) ELSE (
 		
 			color 0A	
 				cd "%serverRootPath%"
-					start "Wolfe's A3 Liberation Modded" arma3server.exe -port=2302 "-config=%serverRootPath%\TADST\default\TADST_config.cfg" "-cfg=%serverRootPath%\TADST\default\TADST_basic.cfg" "-profiles=%serverRootPath%\TADST\default" -name=default -filePatching -pid=pid.log -ranking=ranking.log "-mod=curator;heli;kart;mark;@ace;@Advanced Rappelling;@Advanced Sling Loading;@Advanced Towing;@Advanced Urban Rappelling;@Arma Enhanced Movement;@CBA_A3;@task_force_radio;@WolfeLib;@RHSAFRF;@RHSUSAF;@Tryk's Multi-play Uniforms Pack 0.9.4b;@TRYK Multiplay-Uniform Fix;@ADR-97 Weapon Pack (Official Mod);@BloodLust;@a3-team-mod-test;@ShackTac User Interface@2035- Russian Armed Forces (3.0);@JSRS - RHS - Vehicles Sound Patch;@JSRS SOUNDMOD - ADR97 Weapon Pack Sound Support;@JSRS SOUNDMOD - Additional Weapon Handling and Reloading Sounds;@JSRS SOUNDMOD;@ACEX;@ACE Compat - ADR-97 Weapon Pack;@ACE Compat - RHS Armed Forces of the Russian Federation;@ACE Compat - RHS- GREF;@ACE Compat - RHS United States Armed Forces;@KSK 2035 - Tropic;@Black Mk14 EBR Mod1;@Bundeswehr Kleiderkammer (PBW);@BWMod;@RHSAFRF;@RHSUSAF;@RHSGREF;@RHSSAF;" -autoInit
+					start "Wolfe's A3 Liberation Modded" arma3server.exe -port=2302 "-config=C:\Users\RyWolfe\Documents\Arma3Server\TADST\default\TADST_config.cfg" "-cfg=C:\Users\RyWolfe\Documents\Arma3Server\TADST\default\TADST_basic.cfg" "-profiles=C:\Users\RyWolfe\Documents\Arma3Server\TADST\default" -name=default -filePatching -pid=pid.log -ranking=ranking.log "-mod=curator;heli;kart;mark;@ace;@Advanced Rappelling;@Advanced Sling Loading;@Advanced Towing;@Advanced Urban Rappelling;@Arma Enhanced Movement;@CBA_A3;@task_force_radio;@WolfeLib;@RHSAFRF;@RHSUSAF;@Tryk's Multi-play Uniforms Pack 0.9.4b;@TRYK Multiplay-Uniform Fix;@ADR-97 Weapon Pack (Official Mod);@BloodLust;@a3-team-mod-test;@ShackTac User Interface@2035- Russian Armed Forces (3.0);@JSRS - RHS - Vehicles Sound Patch;@JSRS SOUNDMOD - ADR97 Weapon Pack Sound Support;@JSRS SOUNDMOD - Additional Weapon Handling and Reloading Sounds;@JSRS SOUNDMOD;@ACEX;@ACE Compat - ADR-97 Weapon Pack;@ACE Compat - RHS Armed Forces of the Russian Federation;@ACE Compat - RHS- GREF;@ACE Compat - RHS United States Armed Forces;@KSK 2035 - Tropic;@Black Mk14 EBR Mod1;@Bundeswehr Kleiderkammer (PBW);@BWMod;@RHSAFRF;@RHSUSAF;@RHSGREF;@RHSSAF;@GetLitWithWolfe;@Bullet Casings" -autoInit
 						echo:
 						echo:
 						echo ~Server Starting!~
@@ -91,7 +91,7 @@ if %userSelect% EQU 6 ( EXIT ) ELSE (
 
 			cd "%steamcmdRootPath%"
 				set /P UserPW=Pass: 
-					start "Updater" /wait steamcmd.exe +login darkshadows311 %UserPW% +force_install_dir "%serverRootPath%" +workshop_download_item 107410 450814997 +workshop_download_item 107410 463939057 +workshop_download_item 107410 713709341 +workshop_download_item 107410 615007497 +workshop_download_item 107410 639837898 +workshop_download_item 107410 730310357 +workshop_download_item 107410 333310405 +workshop_download_item 107410 620019431 +workshop_download_item 107410 772765069 +workshop_download_item 107410 775069027 +workshop_download_item 107410 684872545 +workshop_download_item 107410 741196544 +workshop_download_item 107410 669962280 +workshop_download_item 107410 667953829 +workshop_download_item 107410 785645866 +workshop_download_item 107410 49874088 +workshop_download_item 107410 543460260 +workshop_download_item 107410 870212593 +workshop_download_item 107410 863391974 +workshop_download_item 107410 863393819 +workshop_download_item 107410 861133494 +workshop_download_item 107410 708250744 +workshop_download_item 107410 773136286 +workshop_download_item 107410 773131200 +workshop_download_item 107410 884966711 +workshop_download_item 107410 773125288 +workshop_download_item 107410 705947357 +workshop_download_item 107410 457726593 +workshop_download_item 107410 835394852  +workshop_download_item 107410 870276636  +workshop_download_item 107410 843425103 +workshop_download_item 107410 843577117 +workshop_download_item 107410 843593391 +workshop_download_item 107410 843632231 +app_update 233780 validate +quit
+					start "Updater" /wait steamcmd.exe +login darkshadows311 %UserPW% +force_install_dir "%serverRootPath%" +workshop_download_item 107410 450814997 +workshop_download_item 107410 463939057 +workshop_download_item 107410 713709341 +workshop_download_item 107410 615007497 +workshop_download_item 107410 639837898 +workshop_download_item 107410 730310357 +workshop_download_item 107410 333310405 +workshop_download_item 107410 620019431 +workshop_download_item 107410 772765069 +workshop_download_item 107410 775069027 +workshop_download_item 107410 684872545 +workshop_download_item 107410 741196544 +workshop_download_item 107410 669962280 +workshop_download_item 107410 667953829 +workshop_download_item 107410 785645866 +workshop_download_item 107410 498740884 +workshop_download_item 107410 543460260 +workshop_download_item 107410 870212593 +workshop_download_item 107410 863391974 +workshop_download_item 107410 863393819 +workshop_download_item 107410 861133494 +workshop_download_item 107410 708250744 +workshop_download_item 107410 773136286 +workshop_download_item 107410 773131200 +workshop_download_item 107410 884966711 +workshop_download_item 107410 773125288 +workshop_download_item 107410 705947357 +workshop_download_item 107410 457726593 +workshop_download_item 107410 835394852  +workshop_download_item 107410 870276636  +workshop_download_item 107410 843425103 +workshop_download_item 107410 843577117 +workshop_download_item 107410 843593391 +workshop_download_item 107410 843632231 +workshop_download_item 107410 606289254 +app_update 233780 validate +quit
 						echo:
 						echo:
 						echo ~SteamCMD Mods Updated!~
@@ -212,6 +212,7 @@ if %userSelect% EQU 6 ( EXIT ) ELSE (
 		XCOPY "%steamcmdRootPath%\steamapps\workshop\content\107410\843577117\*.*" "%serverRootPath%\@RHSUSAF"/S /Y /I /Q /K 
 		XCOPY "%steamcmdRootPath%\steamapps\workshop\content\107410\843593391\*.*" "%serverRootPath%\@RHSGREF" /S /Y /I /Q /K 
 		XCOPY "%steamcmdRootPath%\steamapps\workshop\content\107410\843632231\*.*" "%serverRootPath%\@RHSSAF" /S /Y /I /Q /K 
+		XCOPY "%steamcmdRootPath%\steamapps\workshop\content\107410\606289254\*.*" "%serverRootPath%\@Bullet Casings" /S /Y /I /Q /K 
 		
 		echo:
 				echo:
@@ -243,11 +244,11 @@ if %userSelect% EQU 6 ( EXIT ) ELSE (
 		XCOPY "%serverRootPath%\@ADR-97 Weapon Pack (Official Mod)\Keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
 		XCOPY "%serverRootPath%\@BloodLust\Keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
 		XCOPY "%serverRootPath%\@a3-team-mod-test\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
-		XCOPY "%serverRootPath%\@2035- Russian Armed Forces (3.0)\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
-		XCOPY "%serverRootPath%\@JSRS - RHS - Vehicles Sound Patch\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
-		XCOPY "%serverRootPath%\@JSRS SOUNDMOD - ADR97 Weapon Pack Sound Support\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
-		XCOPY "%serverRootPath%\@JSRS SOUNDMOD - Additional Weapon Handling and Reloading Sounds\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
-		XCOPY "%serverRootPath%\@JSRS SOUNDMOD\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
+		XCOPY "%serverRootPath%\@2035- Russian Armed Forces (3.0)\Keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
+		XCOPY "%serverRootPath%\@JSRS - RHS - Vehicles Sound Patch\Keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
+		XCOPY "%serverRootPath%\@JSRS SOUNDMOD - ADR97 Weapon Pack Sound Support\Keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
+		XCOPY "%serverRootPath%\@JSRS SOUNDMOD - Additional Weapon Handling and Reloading Sounds\Keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
+		XCOPY "%serverRootPath%\@JSRS SOUNDMOD\Keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
 		XCOPY "%serverRootPath%\@ACEX\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
 		XCOPY "%serverRootPath%\@ACE Compat - ADR-97 Weapon Pack\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
 		XCOPY "%serverRootPath%\@ACE Compat - RHS Armed Forces of the Russian Federation\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
@@ -257,10 +258,11 @@ if %userSelect% EQU 6 ( EXIT ) ELSE (
 		XCOPY "%serverRootPath%\@Black Mk14 EBR Mod1\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
 		XCOPY "%serverRootPath%\@Bundeswehr Kleiderkammer (PBW)\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
 		XCOPY "%serverRootPath%\@BWMod\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
-		XCOPY "%serverRootPath%\@RHSAFRF\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
-		XCOPY "%serverRootPath%\@RHSUSAF\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
-		XCOPY "%serverRootPath%\@RHSGREF\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
-		XCOPY "%serverRootPath%\@RHSSAF\keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
+		XCOPY "%serverRootPath%\@RHSAFRF\key\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
+		XCOPY "%serverRootPath%\@RHSUSAF\key\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
+		XCOPY "%serverRootPath%\@RHSGREF\key\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
+		XCOPY "%serverRootPath%\@RHSSAF\key\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
+		XCOPY "%serverRootPath%\@Bullet Casings\Keys\*.*" "%serverRootPath%\Keys" /S /Y /I /Q /K 
 		
 
 			echo:
